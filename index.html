@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Calc-U-L8r</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<p>Enter a numbers to add/subtract/divide/multiply.</p>
+<p>When calculating the square or square root, enter a number in the first box only.</p>
+
+  <form>
+    <input type="number" placeholder="Enter a number" id="first_number">
+    <select id="operation">
+      <option value="1">+</option>
+      <option value="2">-</option>
+      <option value="3">/</option>
+      <option value="4">*</option>
+      <option value="5">sq</option>
+      <option value="6">root</option>
+    </select>
+    <input type="number" placeholder="Enter a number" id="second_number">
+    <button id="event_click">Calculate!</button>
+  </form>
+
+  <br>
+  <p>Want to do something more... fiddly? Well, choose from the following, what you would like to calculate!</p>
+  <ul>
+    <li><a href="volumes.html" alt="Volumes Calulcator">Volumes</a></li>
+    <li><a href="age.html" alt="Age Calulcator">Age</a></li>
+    <li><a href="metric.html" alt="Metric Conversion Calulcator">Metric Converter</a></li>
+  </ul>
+
+  <script type="text/javascript">
+
+
+    document.getElementById("event_click").addEventListener("click", function() {
+
+      var first = document.getElementById("first_number").value;
+      var second = document.getElementById('second_number').value;
+  // console.log(first, second)
+  // alert(first,second);
+  var operation1= document.getElementById("operation");
+  switch (operation1.value) {
+    case "1":
+    alert("The answer is " + (parseInt(first) + parseInt(second)));
+    break;
+    case "2":
+    alert("The answer is " + (parseInt(first) - parseInt(second)));
+    break;
+    case "3":
+    alert("The answer is " + (parseInt(first) / parseInt(second)));
+    break;
+    case "4":
+    alert("The answer is " + (parseInt(first) * parseInt(second)));
+    break;
+    case "5":
+    alert(parseInt(first) + " squared is: " + (parseInt(first) * parseInt(first)));
+    break;
+    case "6":
+    alert("The root of " + parseInt(first) + " is: " + (Math.sqrt(parseInt(first))));
+    break;
+  }
+});
+
+
+//   var first = document.getElementById("first_number");
+//   var second = document.getElementById('second_number');
+
+//   var answer = parseInt(first) + parseInt(second);
+
+//   console.log()
+
+//   document.getElementById("event_click").addEventistener("click", function() {
+//     alert("The answer is" + answer );
+
+// });
+
+</script>
+
+</body>
+</html>
