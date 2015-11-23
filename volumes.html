@@ -37,6 +37,13 @@
     <button id="event_click">Calculate!</button>
   </form>
 
+  <ul>
+    <li><a href="index.html" alt="Home Page Basic And Advanced Calculator">Home</a></li>
+    <li><a href="volumes.html" alt="Volumes Calulcator">Volumes</a></li>
+    <li><a href="age.html" alt="Age Calulcator">Age</a></li>
+    <li><a href="metric.html" alt="Metric Conversion Calulcator">Metric Converter</a></li>
+  </ul>
+
 
   <script type="text/javascript">
 
@@ -50,7 +57,7 @@
       var operation1= document.getElementById("operation");
       switch (operation1.value) {
         case "1":
-        alert("The answer is " + ((Math.PI) * (Math.pow(parseInt(first), 2)) * ((4 / 3) * parseInt(first) + parseInt(second)));
+        alert("The answer is " + ((Math.PI) * (Math.pow(parseInt(first), 2)) * ((4 / 3) * parseInt(first) + parseInt(second))));
         break;
         case "2":
         alert("The answer is " + ((1 / 3) * (Math.PI) * parseInt(first) * parseInt(second)));
@@ -59,13 +66,13 @@
         alert("The answer is " + (parseInt(first) * 3));
         break;
         case "4":
-        alert("The answer is " + ((Math.PI) * (parseInt(first) ** 2) * parseInt(second)));
+        alert("The answer is " + ((Math.PI) * (Math.pow(parseInt(first), 2)) * parseInt(second)));
         break;
         case "5":
         alert("The answer is " + (parseInt(first) * parseInt(second) * parseInt(third)));
         break;
         case "6":
-        alert("The answer is " + ((4 / 3) * (Math.PI) * (parseInt(first) ** 3)));
+        alert("The answer is " + ((4 / 3) * (Math.PI) * (Math.pow(parseInt(first), 3))));
         break;
       }
     });

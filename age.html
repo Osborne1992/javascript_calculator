@@ -6,5 +6,53 @@
 </head>
 <body>
 
+  <form>
+    <input type="number" placeholder="Day of Birth" id="day_of_birth">
+    <select id="month">
+      <option value="1">Jan</option>
+      <option value="2">Feb</option>
+      <option value="3">Mar</option>
+      <option value="4">Apr</option>
+      <option value="5">May</option>
+      <option value="6">Jun</option>
+      <option value="7">Jul</option>
+      <option value="8">Aug</option>
+      <option value="9">Sep</option>
+      <option value="10">Oct</option>
+      <option value="11">Nov</option>
+      <option value="12">Dec</option>
+    </select>
+    <input type="number" placeholder="Year of Birth" id="year_of_birth">
+    <button id="event_click">Calculate!</button>
+  </form>
+
+
+  <ul>
+    <li><a href="index.html" alt="Home Page Basic And Advanced Calculator">Home</a></li>
+    <li><a href="volumes.html" alt="Volumes Calulcator">Volumes</a></li>
+    <li><a href="age.html" alt="Age Calulcator">Age</a></li>
+    <li><a href="metric.html" alt="Metric Conversion Calulcator">Metric Converter</a></li>
+  </ul>
+
+  <script type="text/javascript">
+
+    document.getElementById("event_click").addEventListener("click", function() {
+
+      var dobday = document.getElementById("day_of_birth").value;
+      var dobmonth = document.getElementById("month").value;
+      var dobyear = document.getElementById('year_of_birth').value;
+
+      var today = new Date();
+
+      var age = parseInt(today.year) - parseInt(dobyear)
+      var age = age - 1 if (dobmonth > today.month or (dobmonth >= today.month and dobday > today.day))
+
+      alert("You are " + age + " years old!")
+
+
+    };
+
+  </script>
+
 </body>
 </html>
